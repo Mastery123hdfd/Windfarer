@@ -22,7 +22,7 @@ public abstract class WorldHandler {
         // TODO: Replace with ServiceLoaders!
         return new String[] {
                 // Exact version (e.g. 1.21.11 or 26.1.2)
-                "v" + parts[0] + "_" + parts[1] + "_" + patch,
+                "v" + parts[0] + "_" + parts[1] + "_" + (parts.length > 2 ? parts[2] : "0"),
                 // After that minor version (e.g. 1.21 or 26.1)
                 "v" + parts[0] + "_" + parts[1],
                 // And at last, the major version only (e.g. 1 or 26), hopefully we never need this!
